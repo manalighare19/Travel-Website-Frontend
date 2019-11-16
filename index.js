@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port =  3000;
+const port =  8080;
 
 const bodyParser=require('body-parser');
 const cookie_parser = require('cookie-parser');
@@ -19,6 +19,6 @@ app.set('view engine', 'ejs');
 
 //Route Middlewares
 app.use('/user', authRoute);
-app.use('/places', placeRoute);
+app.use('/cities', placeRoute);
 
-app.listen(port, () => console.log('Listening on port 3000'));
+app.listen(port, () => console.log('Listening on port 8080'));

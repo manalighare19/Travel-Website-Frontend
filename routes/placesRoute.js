@@ -6,12 +6,19 @@ router.post('/home',async(req,res) => {
     axios.post('https://travel-website-api-90028.herokuapp.com/api/places/getcity', {
         name:req.body.city
     }).then(response => {
-        console.log(req.body.city); 
-        //res.render('searchCity');
+        axios.post('https://travel-website-api-90028.herokuapp.com/api/places/getplaces', {
+            city:response.data.cityId
+        }).then(response => {
+            console.log(response);
+            res.render('cityInformation',{placeData: response.data});
+        }).catch(err => {
+            console.log(err);
+        })
     }).catch(err => {
         console.log(err);
     })
 });
+
 
 module.exports =router;
 
