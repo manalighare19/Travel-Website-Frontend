@@ -16,6 +16,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(cookie_parser());
 app.set('view engine', 'ejs');
+app.use('/assets', express.static('assets'));
 
 //Route Middlewares
 app.use('/user', authRoute);

@@ -7,18 +7,18 @@
     <title>Places & Hotels</title>
 </head>
 <body>
-    <h2><%= </h2>
+    <h2><%= CityName %></h2>
     <div>
         <% for(var i=0; i< placeData.length; i++) { %>
             <table>
-                <thead>
+                <tbody>
                     <tr>
-                        <th><%= placeData[i].name %></th>
+                        <td><br><%= placeData[i].name %> <br><br> <img src='<%= placeData[i].image %>' width="400" height="300" alt="No image found"> 
+                            <br><%= placeData[i].description %><br></td>
                     </tr>
-                </thead>
+                </tbody>
     
             </table>
-    
         <%	} %>
     
     </div>

@@ -1,0 +1,67 @@
+body, html {
+    height: 100%;
+  }
+
+.login_style{
+    background-image: url("https://www.publicdomainpictures.net/pictures/190000/velka/travel-background-1469438756vUG.jpg");
+    height: 100%;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.login_style h2{
+    font-family: 'amatic SC', sans-serif;
+    color: black;
+    margin-left: 70%;
+  
+    font-size: 50px;
+}
+
+.login_style input[type=text] {
+    width: 25%;
+    margin-left: 65%;
+  
+    padding: 8px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    resize: vertical;
+    margin-top: 80px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 18px;
+}
+
+.login_style input[type=password] {
+    width: 25%;
+    margin-left: 65%;
+    
+    padding: 8px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    resize: vertical;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 18px;
+}
+
+.button-login{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 6px 30px 6px 30px;
+    border-radius:4px;
+    margin-left:74%;
+    margin-top: 15px;
+}
+
+.login_style a{
+    color: black;
+    margin-left: 72.5%;
+    margin-top: 20px;
+}
+  
+  
