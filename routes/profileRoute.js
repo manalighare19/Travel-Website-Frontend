@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const  axios = require('axios');
 
-
 //Register
 router.get('/register', (req,res) => {
     res.render('register');
