@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/stylesheet/styles.css" type="text/css">
+
     <title>Search City</title>
 </head>
 <body>
-    <form action="/cities/home" method="POST">
-        <input type="text" name= "city" placeholder="Search..">
-        <button type="submit" name="action" value="searchCity">Search</button>
-    </form>  
+    <div class="searchcity_style">
+        <form action="/cities/home" method="POST">
+            <input type="text" name= "city" placeholder="Search City to Explore.." required>
+            <button class="button_search" type="submit" name="action" value="searchCity">Search</button>
+        </form> 
+    </div>
+     
 </body>
 </html>

@@ -1,6 +1,11 @@
 const router = require('express').Router();
 const  axios = require('axios');
 
+//search city get method
+router.get('/home', (req,res) => {
+    res.render('searchCity');
+});
+
 //Search city
 router.post('/home',async(req,res) => {
     axios.post('https://travel-website-api-90028.herokuapp.com/api/places/getcity', {

@@ -20,7 +20,7 @@ router.post('/login',async(req,res) => {
     }).then(response => {
         console.log(response.data.token);
         res.cookie('authrization_token',response.data.token);
-        res.render('searchCity');
+        res.redirect('/cities/home');
     }).catch(err => {
         console.log(err);
     })
