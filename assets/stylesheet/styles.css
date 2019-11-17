@@ -3,6 +3,7 @@ body, html {
     margin-left: 0;
     margin-right: 0;
   }
+/* Login page style */
 
 .login_style{
     background-image: url(../images/login.jpg);
@@ -18,7 +19,14 @@ body, html {
     color: black;
     margin-left: 72%;
     font-size: 80px;
-    font-synthesis: weight;
+    font-weight: bold;
+}
+
+.error_msg_style p{
+    margin-left: 71%;
+    font-size: 17px;
+    color: rgb(202, 6, 6);
+    font-weight: bold;
 }
 
 .login_style input[type=text] {
@@ -57,8 +65,17 @@ body, html {
 
 .login_style a{
     color: black;
-    margin-left: 72.5%;
+    margin-left: 72%;
+    font-size: 18px;
 }
+
+.login_style a:hover{
+    color: rgb(31, 31, 173)
+}
+
+
+
+/* Register page style */
 
 .register_style{
     background: url(../images/register.jpg);
@@ -118,6 +135,8 @@ body, html {
     margin-top: 25px;
 }
 
+/* Search city page style */
+
 .searchcity_style{
     height: 100%;
     background: url(../images/search_city_2.jpg);
@@ -129,6 +148,7 @@ body, html {
 
 .searchcity_style input[type=text] {
     width: 60%;
+    height: 30px;
     margin-left: 20%; 
     margin-right: 20%;
     margin-top: 20%;
@@ -153,6 +173,8 @@ body, html {
     margin-top: 25px;
 }
 
+/* City Information page style */
+
 .city_name_style h2{
     background-color: yellow;
     font-family: 'amatic SC', sans-serif;
@@ -161,6 +183,8 @@ body, html {
     font-size: 50px;
     margin-bottom: 20px;
     margin-top: 0;
+    margin-left: 10px;
+    margin-right: 10px;
     font-synthesis: weight;
 }
 .city_name_style a{

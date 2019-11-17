@@ -8,7 +8,7 @@ router.get('/register', (req,res) => {
 
 //Login
 router.get('/login', (req,res) => {
-    res.render('login');
+    res.render('login',{errMessage: null});
 });
 
 //Post method of Login
@@ -22,6 +22,7 @@ router.post('/login',async(req,res) => {
         res.redirect('/cities/home');
     }).catch(err => {
         console.log(err);
+        res.render('login',{errMessage: "Invalid Username or Password"});
     })
 });
 
