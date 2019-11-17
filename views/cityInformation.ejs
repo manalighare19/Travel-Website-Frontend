@@ -7,23 +7,39 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cousine" rel="stylesheet">
     <link rel="stylesheet" href="../assets/stylesheet/styles.css" type="text/css">
     
     <title>Places & Hotels</title>
 </head>
 <body>
-    <div>
+    <div class="city_name_style">
         <h2><%= CityName %></h2>
-        <% for(var i=0; i< placeData.length; i++) { %>
-            <div class="card">
-                <img src='<%= placeData[i].image %>' width="600" height="300" alt="No image found">
-                <div class="container">
-                    <h3> <%= placeData[i].name %> </h3>
-                    <p><%= placeData[i].description %></p>
-                </div>                 
-            </div>
-        <%	} %>
+        <a href="#places" id="a_place"> Places </a>     
+        <a href="#cuisine_places" id="a_cusine"> Cusines </a>
+        <a href="/user/logout" id="a_logout">Logout</a><br><br>
     </div>
-    
+       
+    <% for(var i=0; i< placeData.length; i++) { %>
+        <div id="places" class="place_card">
+            <img src='<%= placeData[i].image %>' width="600" height="300" alt="No image found">
+            <div class="place_container">
+                <h3> <%= placeData[i].name %> </h3>
+                <p><%= placeData[i].description %></p>
+            </div>                 
+        </div>
+    <%	} %>
+
+    <% for(var i=0; i< cusineData.length; i++) { %>
+        <div id="cuisine_places" class="place_card">
+            <img src='<%= cusineData[i].image %>' width="600" height="300" alt="No image found">
+            <div class="place_container">
+                <h3> <%= cusineData[i].name %> </h3>
+                <p><%= cusineData[i].description %></p>
+            </div>                 
+        </div>
+    <%	} %>
+
+        
 </body>
 </html>

@@ -39,4 +39,11 @@ router.post('/register',async(req,res) => {
         console.log(err);
     })
 });
+
+// Logout 
+router.post('/logout', (req,res) => {
+    res.clearCookie('authrization_token');
+    res.redirect('/user/login');
+});
+
 module.exports =router;

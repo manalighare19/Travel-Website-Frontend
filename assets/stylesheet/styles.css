@@ -1,9 +1,11 @@
 body, html {
     height: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 
 .login_style{
-    background-image: url("https://www.publicdomainpictures.net/pictures/190000/velka/travel-background-1469438756vUG.jpg");
+    background-image: url(../images/login.jpg);
     height: 100%;
     background-position:center;
     background-repeat:no-repeat;
@@ -11,7 +13,6 @@ body, html {
     background-attachment: fixed;
     overflow: hidden;
 }
-
 .login_style h2{
     font-family: 'amatic SC', sans-serif;
     color: black;
@@ -26,8 +27,6 @@ body, html {
     padding: 8px;
     border: 0;
     border-bottom: 1px solid #ccc;
-    resize: vertical;
-    margin-top: 25px;
     font-family: 'Montserrat', sans-serif;
     color: black;
     font-size: 18px;
@@ -39,7 +38,6 @@ body, html {
     padding: 8px;
     border: 0;
     border-bottom: 1px solid #ccc;
-    resize: vertical;
     font-family: 'Montserrat', sans-serif;
     color: black;
     font-size: 18px;
@@ -60,17 +58,15 @@ body, html {
 .login_style a{
     color: black;
     margin-left: 72.5%;
-    margin-top: 25px;
 }
 
 .register_style{
-    background-image: url("https://images.unsplash.com/photo-1489914169085-9b54fdd8f2a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80");
+    background: url(../images/register.jpg);
     height: 100%;
     background-position:center;
     background-repeat:no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    overflow: hidden;
 }
 
 .register_style input[type=text] {
@@ -129,7 +125,6 @@ body, html {
     background-repeat:no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    overflow: hidden;
 }
 
 .searchcity_style input[type=text] {
@@ -158,41 +153,74 @@ body, html {
     margin-top: 25px;
 }
 
-.card {
+.city_name_style h2{
+    background-color: yellow;
+    font-family: 'amatic SC', sans-serif;
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-synthesis: weight;
+}
+.city_name_style a{
+    font-family: 'Cousine', sans-serif;
+    color: black;
+    font-size: 20px;
+    font-synthesis: weight;
+} 
+
+#a_place{
+    margin-left: 100px;
+}
+
+#a_place:hover{
+    color:slateblue;
+}
+
+#a_cusine{
+    margin-left: 20px;
+}
+
+#a_cusine:hover{
+    color: slateblue;
+}
+
+#a_logout{
+    float: right;
+    margin-right: 80px;
+}
+
+#a_logout:hover{
+    color: red;
+}
+
+.place_card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 40%;
+    width: 39.5%;
     height: 65%;
-    border-radius: 5px;
+    border-radius: 4px;
     float: left;
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 100px;
 }
   
-.card:hover {
+.place_card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-img {
-    border-radius: 5px 5px 0 0;
+.place_card img {
+    border-radius: 2px 2px 0 0;
 }
   
-.container {
-    padding: 2px 16px;
+.place_container {
+    padding: 2px 6px;
 }
 
-.container p{
+.conplace_containertainer p{
     text-align: justify;
 }
 
-h2{
-    font-family: 'amatic SC', sans-serif;
-    color: black;
-    margin-left: 45%;
-    font-size: 40px;
-    margin-bottom: 0;
-    font-synthesis: weight;
 
-}
-  
   

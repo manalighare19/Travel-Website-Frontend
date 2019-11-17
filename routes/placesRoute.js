@@ -6,20 +6,29 @@ router.get('/home', (req,res) => {
     res.render('searchCity');
 });
 
+
 //Search city
 router.post('/home',async(req,res) => {
+    
+    let cityName
     axios.post('https://travel-website-api-90028.herokuapp.com/api/places/getcity', {
         name:req.body.city
-    }).then(response => {
-        const cityName = response.data.name;
-        axios.post('https://travel-website-api-90028.herokuapp.com/api/places/getplaces', {
-            city:response.data.cityId
         }).then(response => {
-            console.log(response);
-            res.render('cityInformation',{placeData: response.data, CityName: cityName});
-        }).catch(err => {
-            console.log(err);
-        })
+            cityName = response.data.name;
+    
+            axios.all([
+                axios.post('https://travel-website-api-90028.herokuapp.com/api/places/getplaces', {
+                    city:response.data.cityId
+                }),
+                axios.post('https://travel-website-api-90028.herokuapp.com/api/places/getfoodplaces', {
+                city:response.data.cityId
+                 })
+            ]).then(axios.spread((placeData, cusineData) => {
+                console.log(placeData.data);
+                console.log(cusineData.data);
+                res.render('cityInformation',{placeData: placeData.data, CityName: cityName, cusineData:cusineData.data});
+
+            }));
     }).catch(err => {
         console.log(err);
     })
