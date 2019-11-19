@@ -15,9 +15,9 @@
     <div class="login_style">
         <h2>Explore.</h2>
         <div class="error_msg_style"> 
-                <% if(errMessage){ %>
-                    <p><%= errMessage %></p>
-                <% } %>
+            <% if(errMessage){ %>
+                <p><%= errMessage %></p>
+            <% } %>
         </div>
         <form action="/user/login" method="post">
             <input type="text" name="username"  placeholder=" Username" required><br><br>

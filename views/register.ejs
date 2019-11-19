@@ -13,6 +13,12 @@
 </head>
 <body  style="overflow: hidden; margin: 0%; width: 100%;">
     <div class="register_style">
+            <div class="reg_error_msg_style"> 
+                    <% if(errMessage){ %>
+                        <p><%= errMessage %></p>
+                    <% } %>
+            </div>
+           
         <form action="/user/register" method="post">
             <input type="text" name="name" placeholder=" Name " required><br><br>
             <input type="email" name="email" placeholder=" Email " required><br><br>
@@ -21,6 +27,6 @@
             <button class="button_register" type="submit" name="action" value="register">Register</button>
         </form>
     </div>
-   
+    
 </body>
 </html>

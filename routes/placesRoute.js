@@ -3,7 +3,7 @@ const  axios = require('axios');
 
 //search city get method
 router.get('/home', (req,res) => {
-    res.render('searchCity');
+    res.render('searchCity',{errMessage: null});
 });
 
 
@@ -26,11 +26,12 @@ router.post('/home',async(req,res) => {
             ]).then(axios.spread((placeData, cusineData) => {
                 console.log(placeData.data);
                 console.log(cusineData.data);
-                res.render('cityInformation',{placeData: placeData.data, CityName: cityName, cusineData:cusineData.data});
+                res.render('cityInformation',{placeData: placeData.data, CityName: cityName, cusineData:cusineData.data, errMessage: null});
 
             }));
     }).catch(err => {
         console.log(err);
+        res.render('searchCity',{errMessage: err.response.data.message})
     })
 });
 

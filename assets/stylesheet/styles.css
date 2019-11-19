@@ -84,6 +84,7 @@ body, html {
     background-repeat:no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 .register_style input[type=text] {
@@ -93,7 +94,7 @@ body, html {
     border: 0;
     border-bottom: 1px solid #ccc;
     resize: vertical;
-    margin-top: 8%;
+    margin-top: 4%;
     font-family: 'Montserrat', sans-serif;
     color: black;
     font-size: 18px;
@@ -135,6 +136,15 @@ body, html {
     margin-top: 25px;
 }
 
+.reg_error_msg_style{
+    margin-left: 38%;
+    margin-top: 60px;
+    margin-bottom: 0;
+    font-size: 17px;
+    color: rgb(202, 6, 6);
+   
+}
+
 /* Search city page style */
 
 .searchcity_style{
@@ -144,6 +154,16 @@ body, html {
     background-repeat:no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    overflow: hidden;
+}
+
+.searchCity_error_msg_style{
+    margin-left: 45%;
+    margin-bottom: 0;
+    margin-top: 16%;
+    font-size: 18px;
+    color:white;
+    font-weight: bold;
 }
 
 .searchcity_style input[type=text] {
@@ -151,7 +171,7 @@ body, html {
     height: 30px;
     margin-left: 20%; 
     margin-right: 20%;
-    margin-top: 20%;
+    margin-top: 2%;
     padding: 8px;
     border: 0;
     border-bottom: 1px solid #ccc;

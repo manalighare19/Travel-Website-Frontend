@@ -11,8 +11,13 @@
 
     <title>Search City</title>
 </head>
-<body style="overflow: hidden; margin: 0%; width: 100%;">
+<body style="overflow: hidden; margin-top: 0%; width: 100%;">
     <div class="searchcity_style">
+        <div class="searchCity_error_msg_style"> 
+            <% if(errMessage){ %>
+                <p><%= errMessage %></p>
+            <% } %>
+        </div>
         <form action="/cities/home" method="POST">
             <input type="text" name= "city" placeholder="Search City to Explore.." required>
             <button class="button_search" type="submit" name="action" value="searchCity">Search</button>

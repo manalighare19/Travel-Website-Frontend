@@ -3,7 +3,7 @@ const  axios = require('axios');
 
 //Register
 router.get('/register', (req,res) => {
-    res.render('register');
+    res.render('register',{errMessage: null});
 });
 
 //Login
@@ -22,7 +22,7 @@ router.post('/login',async(req,res) => {
         res.redirect('/cities/home');
     }).catch(err => {
         console.log(err);
-        res.render('login',{errMessage: "Invalid Username or Password"});
+        res.render('login',{errMessage: err.response.data.message});
     })
 });
 
@@ -34,10 +34,11 @@ router.post('/register',async(req,res) => {
         password: req.body.password
     }).then(response => {
         console.log(response);
-        res.render('login');
+        res.render('login',{errMessage: null});
         //res.cookie('authrization_token',response.data.token);
     }).catch(err => {
         console.log(err);
+        res.render('register',{errMessage: err.response.data.message});
     })
 });
 
