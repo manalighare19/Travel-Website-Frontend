@@ -8,8 +8,10 @@ const bodyParser=require('body-parser');
 const cookie_parser = require('cookie-parser');
 
 //Import Routes
-const authRoute = require('./routes/profileRoute');
+const loginRoute = require('./routes/loginRoute');
+const registerRoute = require('./routes/registerRoute');
 const placeRoute = require('./routes/placesRoute');
+const searchCityRoute = require('./routes/searchCityRoute');
 
 //Middleware
 app.use(express.json());
@@ -19,12 +21,20 @@ app.set('view engine', 'ejs');
 app.use('/assets', express.static('assets'));
 
 //Route Middlewares
-app.use('/user', authRoute);
-app.use('/cities', placeRoute);
+app.use('/login', loginRoute);
+app.use('/register', registerRoute);
+app.use('/home', placeRoute);
+app.use('/search', searchCityRoute);
+
+// Logout 
+app.post('/logout', (req,res) => {
+    res.clearCookie('authrization_token');
+    res.redirect('/login');
+});
 
 //Default route
 app.get('/*', (req,res) => {
-    res.redirect('/user/login');
+    res.redirect('/login');
 });
 
 app.listen(port, () => console.log('Listening on port 8080'));

@@ -19,12 +19,12 @@
                 <p><%= errMessage %></p>
             <% } %>
         </div>
-        <form action="/user/login" method="post">
+        <form action="/login" method="post">
             <input type="text" name="username"  placeholder=" Username" required><br><br>
             <input type="password" name="password" placeholder=" Password" required><br><br>
           
             <button class="button_login" type="submit" name="action" value="login">Login</button><br><br>
-            <a href="/user/register">New User? Register here.</a>
+            <a href="/register">New User? Register here.</a>
         </form>  
     </div>
     

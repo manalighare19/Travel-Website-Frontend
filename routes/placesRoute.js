@@ -1,27 +1,31 @@
 const router = require('express').Router();
 const  axios = require('axios');
 
-//search city get method
-router.get('/home', (req,res) => {
-    res.render('searchCity',{errMessage: null});
-});
 
 
 //Search city
-router.post('/home',async(req,res) => {
+router.post('/',async(req,res) => {
     
-    let cityName
-    axios.post('https://travel-website-api-90028.herokuapp.com/api/places/getcity', {
-        name:req.body.city
+    const params = {
+        "name":req.body.city
+    }
+    axios.get('https://travel-website-api-90028.herokuapp.com/api/cities', {
+        params : params
         }).then(response => {
+            
             cityName = response.data.name;
-    
+            cityId= response.data.cityId;
+            
+            const params = {
+                "cityId":cityId
+            }
+
             axios.all([
-                axios.post('https://travel-website-api-90028.herokuapp.com/api/places/getplaces', {
-                    city:response.data.cityId
+                axios.get('https://travel-website-api-90028.herokuapp.com/api/cities/attractions', {
+                    params: params
                 }),
-                axios.post('https://travel-website-api-90028.herokuapp.com/api/places/getfoodplaces', {
-                city:response.data.cityId
+                axios.get('https://travel-website-api-90028.herokuapp.com/api/cities/food', {
+                    params: params
                  })
             ]).then(axios.spread((placeData, cusineData) => {
                 console.log(placeData.data);
