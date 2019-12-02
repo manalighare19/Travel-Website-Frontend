@@ -266,5 +266,50 @@ body, html {
     text-align: justify;
 }
 
+/* Admin Home page style */
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.adminhome_style input[type=text]{
+    width: 25%;
+    height: 30px;
+    margin-left: 35%; 
+    margin-right: 35px;
+    margin-top: 2%;
+    padding: 8px;
+    border: 0;
+    border: 1px solid black;
+    resize: vertical;
+    color: black;
+    font-size: 15px;
+}
+
+#admin_logout{
+    float: right;
+    margin-right: 10%;
+    margin-top: 2.1%;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#admin_logout:hover{
+    color: red;
+}
+.edit_button{
+    font-size: 13px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 6px 30px 6px 30px;
+    border-radius:4px;
+    margin-top: 2%;
+}
+
+
+/* Edit information page style  */
+
+
 
   

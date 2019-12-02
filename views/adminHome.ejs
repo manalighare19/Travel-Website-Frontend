@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/stylesheet/styles.css" type="text/css">
+
+    <title>Admin Home</title>
+</head>
+<body>
+    <div class="adminhome_style">
+        <form action="/admin/edit-info" method="POST">
+            <input type="text" placeholder="Enter Id to edit data" name="_id">
+            <button class="edit_button" type="submit"> Edit </button>
+            <a href="/admin/logout" id="admin_logout">Logout</a><br><br>
+        </form>
+    </div>
+    
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+              <th>Id</th>
+              <th>City Id</th>
+              <th>Place Name</th>
+              <th>Description</th>
+              <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(var i=0; i< attractionData.length; i++) { %>
+                <tr>
+                    <td><%= attractionData[i]._id %></td>
+                    <td><%= attractionData[i].city %></td>
+                    <td><%= attractionData[i].name %></td>
+                    <td><%=attractionData[i].description %></td>
+                    <td> <img src='<%= attractionData[i].image %>' width="100" height="50" alt="No image found"></td>
+                </tr>
+                   
+            <%	} %>
+        </tbody>
+    </table>
+    
+</body>
+</html>

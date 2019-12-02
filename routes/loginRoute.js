@@ -9,7 +9,7 @@ router.get('/', (req,res) => {
 });
 
 //Post method of Login
-router.post('/',async(req,res) => {
+router.post('/', async(req,res) => {
     axios.post('https://travel-website-api-90028.herokuapp.com/api/login', {
     email: req.body.username,
     password: req.body.password

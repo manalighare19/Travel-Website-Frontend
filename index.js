@@ -12,6 +12,7 @@ const loginRoute = require('./routes/loginRoute');
 const registerRoute = require('./routes/registerRoute');
 const placeRoute = require('./routes/placesRoute');
 const searchCityRoute = require('./routes/searchCityRoute');
+const adminRoute = require('./routes/adminRoute');
 
 //Middleware
 app.use(express.json());
@@ -25,12 +26,14 @@ app.use('/login', loginRoute);
 app.use('/register', registerRoute);
 app.use('/home', placeRoute);
 app.use('/search', searchCityRoute);
+app.use('/admin', adminRoute);
 
 // Logout 
 app.post('/logout', (req,res) => {
     res.clearCookie('authrization_token');
     res.redirect('/login');
 });
+
 
 //Default route
 app.get('/*', (req,res) => {

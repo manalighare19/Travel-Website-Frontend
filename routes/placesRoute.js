@@ -28,8 +28,6 @@ router.post('/',async(req,res) => {
                     params: params
                  })
             ]).then(axios.spread((placeData, cusineData) => {
-                console.log(placeData.data);
-                console.log(cusineData.data);
                 res.render('cityInformation',{placeData: placeData.data, CityName: cityName, cusineData:cusineData.data, errMessage: null});
 
             }));

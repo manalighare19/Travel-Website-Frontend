@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <title>Edit Information</title>
+</head>
+<body>
+    <form action="/admin/save-info" method="POST">
+        <table  class="table ">
+            <thead>
+                <th>Label</th>
+                <th>Data</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>
+                        <textarea rows="2" cols="45" name="name"><%= object.name %></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>
+                        <textarea rows="3" cols="70" name="desc"><%= object.description %></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>imageURL</td>
+                    <td>
+                        <textarea rows="4" cols="70" name="imageURL"><%= object.image %></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" name="action">Save</button></td>
+                </tr>
+            </tbody> 
+        </table>
+        <input type="hidden" name="_id" value="<%= object._id %>">
+        <input type="hidden" name="cityId" value="<%= object.city %>" disabled>
+
+        <!-- <input type="hidden" name="_id" value="<%= object._id %>">
+        <input type="hidden" name="cityId" value="<%= object.city %>" disabled>
+        <br>
+        <label for="name"> Name</label>
+        <input type="text" name="name" value="<%= object.name %>">
+        <br>
+        <label for="description"> description</label>
+        <input type="text" name="desc" value="<%= object.description %>">
+        <br>
+        <label for="image"> Image URL</label>
+        <input type="text" name="imageURL" value="<%= object.image %>">
+        <br>  
+        <button type="submit" name="action">Save</button> -->
+        
+    </form>
+</body>
+</html>
