@@ -12,7 +12,7 @@
 <body>
     <div class="adminhome_style">
         <form action="/admin/edit-info" method="POST">
-            <input type="text" placeholder="Enter Id to edit data" name="_id">
+            <input type="text" placeholder="Enter Document Id to edit (not a City Id)" name="_id">
             <button class="edit_button" type="submit"> Edit </button>
             <a href="/admin/logout" id="admin_logout">Logout</a><br><br>
         </form>
@@ -21,7 +21,7 @@
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
-              <th>Id</th>
+              <th>Document Id</th>
               <th>City Id</th>
               <th>Place Name</th>
               <th>Description</th>

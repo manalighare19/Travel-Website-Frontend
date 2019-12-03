@@ -8,7 +8,7 @@ router.get('/', (req,res) => {
 
 //Post method of Register
 router.post('/',async(req,res) => {
-    axios.post('https://travel-website-api-90028.herokuapp.com/api/users', {
+    axios.post('https://travel-website-api-90028.herokuapp.com/users', {
         name:req.body.name,
         email: req.body.email,
         password: req.body.password

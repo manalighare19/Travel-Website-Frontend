@@ -10,7 +10,7 @@ router.get('/', (req,res) => {
 
 //Post method of Login
 router.post('/', async(req,res) => {
-    axios.post('https://travel-website-api-90028.herokuapp.com/api/login', {
+    axios.post('https://travel-website-api-90028.herokuapp.com/login', {
     email: req.body.username,
     password: req.body.password
     }).then(response => {

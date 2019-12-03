@@ -9,7 +9,7 @@ router.post('/',async(req,res) => {
     const params = {
         "name":req.body.city
     }
-    axios.get('https://travel-website-api-90028.herokuapp.com/api/cities', {
+    axios.get('https://travel-website-api-90028.herokuapp.com/cities', {
         params : params
         }).then(response => {
             
@@ -21,10 +21,10 @@ router.post('/',async(req,res) => {
             }
 
             axios.all([
-                axios.get('https://travel-website-api-90028.herokuapp.com/api/cities/attractions', {
+                axios.get('https://travel-website-api-90028.herokuapp.com/cities/attractions', {
                     params: params
                 }),
-                axios.get('https://travel-website-api-90028.herokuapp.com/api/cities/food', {
+                axios.get('https://travel-website-api-90028.herokuapp.com/cities/food', {
                     params: params
                  })
             ]).then(axios.spread((placeData, cusineData) => {

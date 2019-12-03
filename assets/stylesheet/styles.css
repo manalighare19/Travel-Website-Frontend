@@ -73,6 +73,12 @@ body, html {
     color: rgb(31, 31, 173)
 }
 
+#admin_login{
+    margin-left: 74%;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
 
 
 /* Register page style */
@@ -266,6 +272,30 @@ body, html {
     text-align: justify;
 }
 
+/* Admin Login Page style */
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 25%;
+    height: 48%;
+    border-radius: 4px;
+    margin-left: 600px;
+    margin-top: 8%;
+    padding: 80px 100px;
+}
+
+.button_admin_login{
+    font-size: 15px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 5px 25px 5px 25px;
+    border-radius:4px;
+    margin-left:27%;
+    margin-top: 15px;
+}
+
+
 /* Admin Home page style */
 table{
     margin-left: auto;
@@ -307,8 +337,6 @@ table{
     margin-top: 2%;
 }
 
-
-/* Edit information page style  */
 
 
 

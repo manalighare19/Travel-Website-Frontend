@@ -28,7 +28,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>imageURL</td>
+                    <td>ImageURL</td>
                     <td>
                         <textarea rows="4" cols="70" name="imageURL"><%= object.image %></textarea>
                     </td>
@@ -41,21 +41,6 @@
         </table>
         <input type="hidden" name="_id" value="<%= object._id %>">
         <input type="hidden" name="cityId" value="<%= object.city %>" disabled>
-
-        <!-- <input type="hidden" name="_id" value="<%= object._id %>">
-        <input type="hidden" name="cityId" value="<%= object.city %>" disabled>
-        <br>
-        <label for="name"> Name</label>
-        <input type="text" name="name" value="<%= object.name %>">
-        <br>
-        <label for="description"> description</label>
-        <input type="text" name="desc" value="<%= object.description %>">
-        <br>
-        <label for="image"> Image URL</label>
-        <input type="text" name="imageURL" value="<%= object.image %>">
-        <br>  
-        <button type="submit" name="action">Save</button> -->
-        
     </form>
 </body>
 </html>
